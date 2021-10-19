@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: multi-k8s.sti.ufpb.br-tls
+spec:
+  secretName: multi-k8s.sti.ufpb.br
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: multi-k8s.sti.ufpb.br
+  dnsNames:
+    - multi-k8s.sti.ufpb.br
