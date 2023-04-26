@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: teste-argo
+  name: teste-argo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: teste-argo
+  template:
+    metadata:
+      labels:
+        app: teste-argo
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
